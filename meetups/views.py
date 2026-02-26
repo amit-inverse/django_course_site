@@ -13,9 +13,9 @@ def index(request):
         'meetups': meetups
     })
 
-def meetup_details(request):
+def meetup_details(request, meetup_slug):
     selected_meetup = { 'title': 'A First Meetup', 'description': 'Here is the description.' }
-    return render(request, "meetups/meetup-detail.html", {
+    return render(request, "meetups/meetup-details.html", {
         'meetup_title': selected_meetup['title'],
         'meetup_description': selected_meetup['description']
     })
