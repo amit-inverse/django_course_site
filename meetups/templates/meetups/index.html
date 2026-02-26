@@ -23,7 +23,7 @@
         <h2>Upcoming Meetups</h2>
         <ul>
             {% for meetup_item in meetups %}
-                {% include 'meetups/includes/meetup-item.html' with title="Title" location='Location' slug='slug' %}
+                {% include 'meetups/includes/meetup-item.html' with title=meetup_item.title location='Kolkata' slug=meetup_item.slug image=meetup_item.image.url %}
             {% endfor %}
         </ul>
     </seciton>
